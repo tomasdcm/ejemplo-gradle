@@ -14,13 +14,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-            }
-        }
-        post {
-            success {
+                post {
                 slackSend "Build deployed successfully"
+       
+                }
             }
         }
+        
     }
 }
