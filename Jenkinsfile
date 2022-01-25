@@ -19,7 +19,7 @@ pipeline {
             }
         post {
             always {
-                slackSend "Build deployed successfully"
+                slackSend 'Build deployed successfully'
                 }
             }
            
