@@ -14,7 +14,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                slackSend "Build deployed successfully"
+                // slackSend "Build deployed successfully"
+                echo 'Building..'
             }
             
                     
