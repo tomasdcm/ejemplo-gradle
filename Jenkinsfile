@@ -17,9 +17,12 @@ pipeline {
                 // slackSend "Build deployed successfully"
                 echo 'Building..'
             }
-            
-                    
-            
+        post {
+            success {
+                slackSend "Build deployed successfully"
+                }
+            }
+           
         }
     }
 }
