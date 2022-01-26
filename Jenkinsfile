@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+	    STAGE = ''
+	}
+    
     stages {
         stage('Build') {
             steps {
@@ -19,7 +23,7 @@ pipeline {
             }
         post {
             always {
-                slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa ${env.STAGE_NAME}'
+                slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa ${STAGE}'
                 }
             }
            
