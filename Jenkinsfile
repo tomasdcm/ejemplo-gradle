@@ -1,4 +1,4 @@
-pipeline {
+ypipeline {
     agent any
 
     environment {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Building..'
+                echo 'Deploying..'
             }
         post {
             	success {
