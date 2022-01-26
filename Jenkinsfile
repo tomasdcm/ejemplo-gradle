@@ -18,12 +18,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // slackSend "Build deployed successfully"
                 echo 'Building..'
             }
         post {
             always {
-                slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa ${STAGE}'
+                	slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa'
                 }
             }
            
