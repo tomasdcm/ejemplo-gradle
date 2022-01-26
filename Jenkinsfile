@@ -19,7 +19,7 @@ pipeline {
             }
         post {
             always {
-                slackSend message:"Build deployed successfully"
+                slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecución exitosa'
                 }
             }
            
