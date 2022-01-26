@@ -21,9 +21,11 @@ pipeline {
                 echo 'Building..'
             }
         post {
-            always {
-                	// slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa
-		   slackSend color: 'danger', message: '[tomasdcm][taller-slack][maven] Ejecucion fallida en stage Deploy'
+            	success {
+                	slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa'
+                }
+		failure {
+		   	slackSend color: 'danger', message: '[tomasdcm][taller-slack][maven] Ejecucion fallida en stage ${STAGE}'
                 }
             }
            
