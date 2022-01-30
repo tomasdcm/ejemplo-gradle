@@ -20,14 +20,14 @@ pipeline {
             steps {
                 echo 'Deploying..'
             }
-        post {
+        /*post {
             	success {
                 	slackSend color: 'good', message: '[tomasdcm][taller-slack][maven] Ejecucion exitosa'
                 }
 		failure {
 		   	slackSend color: 'danger', message: '[tomasdcm][taller-slack][maven] Ejecucion fallida en stage ${STAGE}'
                 }
-            }
+            }*/
            
         }
     }
